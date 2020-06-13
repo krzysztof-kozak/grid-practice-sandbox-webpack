@@ -1,4 +1,4 @@
-import { menu } from './elements.js';
+import { menu, time } from './elements.js';
 import moment from 'moment';
 
 export const toggleMenu = () => menu.classList.toggle('menu--open');
@@ -28,4 +28,4 @@ export const closeMenu = debounce(() => {
   }
 }, 250);
 
-const currentTime = moment().format('HH:mm:ss');
+setInterval(() => (time.innerHTML = moment().format('HH:mm:ss')), 100);
