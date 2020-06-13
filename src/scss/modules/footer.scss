@@ -1,0 +1,22 @@
+.footer {
+  @media (min-width: 768px) {
+    grid-column: 1 / span 2;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1em;
+
+    &:hover {
+      color: #fbc02d;
+      transition: color 1s ease;
+    }
+  }
+}

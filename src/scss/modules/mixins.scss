@@ -1,0 +1,6 @@
+@mixin menuLinkHover {
+  color: white;
+  background-color: #000;
+  border-radius: 2em;
+  transition: color 2s ease, background-color 2s ease;
+}

@@ -1,13 +1,58 @@
-@import "~normalize.css";
+/*** Imports ***/
+@import './modules/navigation.scss';
+@import './modules/header.scss';
+@import './modules/section.scss';
+@import './modules/footer.scss';
 
-@import "_variables";
-@import "modules/hello.scss";
+@import '~normalize.css';
 
+/*** General settings ***/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*** Page styles ***/
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/krzysztof-kozak/grid-practice-sandbox/master/img/sky-background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  margin: 60px 1rem;
+  @media (min-width: 768px) {
+    margin: 60px 1rem;
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    grid-template-rows: 1fr 3fr 50px;
+    column-gap: 4rem;
+  }
+}
+
+.grid-section-1 {
+  grid-column: 1;
+  margin: 0 auto;
+}
+
+.grid-section-2 {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+
+  @media (min-width: 768px) {
+    border-left: 2px groove;
+  }
 }

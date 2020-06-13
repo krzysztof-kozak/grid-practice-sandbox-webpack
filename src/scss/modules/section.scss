@@ -1,0 +1,136 @@
+.section {
+  &__title {
+    font-size: 1.4rem;
+    font-family: 'Space Mono', monospace;
+    color: #fbc02d;
+    margin: 1.5em 0 1em;
+    border-bottom: 5px ridge #00ee0a;
+    padding-bottom: 0.2em;
+    text-align: center;
+    letter-spacing: 2px;
+
+    &--media {
+      @media (min-width: 768px) {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.large-media-wrapper {
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.article {
+  background-color: #f0ffff1a;
+  border-radius: 2em;
+  box-shadow: 1px 1px 4px 2px;
+  margin: 3em 0 4em;
+  padding: 0 0.8em 0.4em;
+  max-width: 600px;
+  @media (min-width: 1440px) {
+    width: 40%;
+  }
+
+  &__title {
+    letter-spacing: 2px;
+    word-spacing: -5px;
+    font-family: 'Space Mono', monospace;
+    color: #4fc3f7;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 1em;
+  }
+
+  &__description {
+    line-height: 1.5rem;
+    text-align: center;
+  }
+}
+
+.wrapper {
+  display: flex;
+  @media (min-width: 768px) {
+    flex-direction: column;
+  }
+}
+.bigger {
+  font-size: 1.5rem;
+}
+
+.side-note {
+  width: 100%;
+
+  &__description {
+    font-family: 'Cantarell', sans-serif;
+    line-height: 1.5em;
+    text-align: right;
+    color: #ffb600;
+
+    @media (min-width: 768px) {
+      text-align: center;
+    }
+
+    &--padding {
+      text-align: center;
+      padding-left: 9px;
+      border-left: 3px solid #fff;
+      line-height: 2em;
+      font-size: 1.05rem;
+
+      @media (min-width: 768px) {
+        text-align: center;
+        border-left: none;
+        line-height: 3em;
+        font-size: 1.45rem;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 600;
+    color: #df1111;
+    letter-spacing: -1px;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      transition: color 2s ease;
+    }
+  }
+}
+
+.games {
+  width: 100%;
+  list-style: square;
+  padding-left: 10px;
+
+  &__item {
+    padding: 0.5em 0 0;
+
+    &:hover {
+      color: #ffb600;
+    }
+    @media (min-width) {
+      padding: 1.5em 0 0;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__link {
+    color: #fafafa;
+
+    &:hover {
+      color: #4fc3f7;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 75%;
+    padding-left: 0;
+    align-self: flex-end;
+  }
+}

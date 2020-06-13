@@ -1,5 +1,12 @@
 import '../scss/main.scss';
 
-/* place your code below */
+import { toggleMenu, closeMenu } from './functions.js';
+import { button } from './elements.js';
 
-console.log('HELLO 🚀')
+const init = () => {
+  console.log('DOM succesfuly parsed and loaded');
+
+  window.addEventListener('resize', closeMenu);
+  button.addEventListener('click', toggleMenu);
+};
+document.addEventListener('DOMContentLoaded', init);
