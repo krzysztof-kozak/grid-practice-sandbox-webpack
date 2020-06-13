@@ -1,4 +1,5 @@
 import { menu } from './elements.js';
+import moment from 'moment';
 
 export const toggleMenu = () => menu.classList.toggle('menu--open');
 
@@ -26,3 +27,5 @@ export const closeMenu = debounce(() => {
     console.log('window resized to >= 768 px, menu closed!');
   }
 }, 250);
+
+const currentTime = moment().format('HH:mm:ss');
