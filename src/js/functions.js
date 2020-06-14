@@ -28,4 +28,4 @@ export const closeMenu = debounce(() => {
   }
 }, 250);
 
-setInterval(() => (time.innerHTML = moment().format('HH:mm:ss')), 100);
+setInterval(() => (time.innerHTML = moment().format('HH:mm:ss')), 1000);
